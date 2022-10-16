@@ -1,5 +1,267 @@
+SELECT 
+	Nome,
+	Preco,
+	dbo.CalculadoraDesconto(Preco, 50) PrecoComDesconto
+FROM Produtos
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--CREATE FUNCTION CalculadoraDesconto(@Preco decimal(13, 2), @Porcentagem int)
+--RETURNS decimal(13, 2)
+
+--BEGIN
+--	RETURN @Preco - @Preco / 100 * @Porcentagem
+--END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--EXEC ObterProdutosPorTamanho 'M'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--CREATE PROCEDURE ObterProdutosPorTamanho
+--@TamanhoProduto varchar(5)
+
+--AS
+
+--SELECT * FROM Produtos WHERE Tamanho = @TamanhoProduto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--EXEC InserirNovoProduto
+--'Novo Produto Procedure',
+--'Colorido',
+--50,
+--'G',
+--'U'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--CREATE PROCEDURE InserirNovoProduto
+--@Nome varchar(255),
+--@Cor varchar(50),
+--@Preco decimal,
+--@Tamanho varchar(5),
+--@Genero char(1)
+
+--AS
+
+--INSERT INTO Produtos(Nome, Cor, Preco, Tamanho, Genero)
+--VALUES(@Nome, @Cor, @Preco, @Tamanho, @Genero)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--ALTER TABLE Produtos
+--DROP CONSTRAINT UQ__Produtos__7D8FE3B2FF067783
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--ALTER TABLE Produtos
+--ADD DEFAULT GETDATE() FOR DataCadastro
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--ALTER TABLE Produtos
+--ADD CONSTRAINT CHK_ColunaGenero CHECK(Genero ='U' OR Genero = 'M' OR Genero = 'F')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--ALTER TABLE Produtos
+--ADD UNIQUE(Nome)
 
 
 
@@ -308,7 +570,7 @@
 
 --SELECT MAX(Preco) PrecoMaior FROM Produtos
 --SELECT MIN(Preco) PrecoMenor FROM Produtos
---SELECT AVG(Preco) PrecoMédio FROM Produtos
+--SELECT AVG(Preco) PrecoMÃ©dio FROM Produtos
 
 
 
